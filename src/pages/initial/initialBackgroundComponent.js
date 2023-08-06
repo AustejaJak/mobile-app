@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import {useCallback} from "react";
 import GlobalStyles from "../../components/globalStyles";
+import SliderButtonComponent from "./sliderButtonComponent";
 const InitialBackgroundComponent = ()=> {
     const [fontsLoaded] = useFonts({
         'Inter-SemiBold': require('../../assets/Inter-SemiBold.ttf'),
@@ -29,7 +30,6 @@ const InitialBackgroundComponent = ()=> {
                 <SafeAreaView style={GlobalStyles.droidSafeArea}>
                     <Text style={[styles.brandText]}>
                     LoremIpsum
-
                     </Text>
                 </SafeAreaView>
                 <View style={styles.textContainer}>
@@ -41,6 +41,7 @@ const InitialBackgroundComponent = ()=> {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget
                         sapien eros. Nulla varius iaculis justo, eget efficitur lorem
                     </Text>
+                    <SliderButtonComponent/>
                 </View>
             </LinearGradient>
         </View>
