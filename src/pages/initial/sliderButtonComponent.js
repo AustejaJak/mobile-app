@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
         fontSize: 15,
     },
     arrowStyle: {
-        height: 15,
-        width: 15,
+        height: 22,
+        width: 22,
     }
 });
 
