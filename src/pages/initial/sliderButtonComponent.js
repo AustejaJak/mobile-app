@@ -5,7 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useCallback } from "react";
 import buttonArrow from '../../assets/initial/buttonArrow.png';
 import { GestureHandlerRootView  } from "react-native-gesture-handler";
-import {useAnimatedGestureHandler, useSharedValue} from "react-native-reanimated";
+import { useAnimatedGestureHandler, useSharedValue } from "react-native-reanimated";
+import { useState } from 'react/cjs/react.production.min';
 
 const BUTTON_WIDTH = 198;
 const BUTTON_HEIGHT = 50;
@@ -20,8 +21,16 @@ const sliderButtonComponent = ({onToggle})=> {
     const animatedGestureHandler = useAnimatedGestureHandler({
         onActive:(e) =>{
             X.value = e.translationX;
+            const [toggled, setToggled] = useState(false);
         }
     })
+
+    const handleComplete = (isToggled) => {
+        if (isToggled != toggled) {
+            setToggled(isToggled);
+            onToggle(isToggled);
+        }
+    }
     const [fontsLoaded] = useFonts({
         'Inter-Medium': require('../../assets/Inter-Medium.ttf'),
     });
