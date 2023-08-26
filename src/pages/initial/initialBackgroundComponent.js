@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         bottom: 60,
+        alignItems: 'center',
     },
     transparentLines: {
         justifyContent: 'center',
@@ -91,6 +92,7 @@ const styles = StyleSheet.create({
         color: '#414141',
         paddingTop: 13,
         paddingHorizontal: 20,
+        marginBottom: 125,
         textAlign: 'justify',
         fontFamily: 'Inter-Regular',
         fontSize: 11,
